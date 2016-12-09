@@ -1,0 +1,213 @@
+$baseFontSize:100 !default;
+$rate:1.2;
+@function px2Rem($px){
+    @return ($px / $baseFontSize / $rate) * 1rem;
+}
+html,body,dl,dt,dd,p,img,a{ 
+    padding: 0;
+    margin: 0; 
+}
+html{-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;}
+body{
+    background-color: #0f141d; 
+}
+a{
+    text-decoration: none;
+}
+*{
+  outline: none; 
+  -webkit-tap-highlight-color: transparent;  
+  -webkit-focus-ring-color: rgba(0, 0, 0, 0);
+}
+.s{
+    width:px2Rem(1080);
+    display: block;
+    &1{
+        height: px2Rem(220);
+        background: url(../img/mirror_01.jpg) no-repeat;
+        background-size: px2Rem(1080) px2Rem(220);
+    }
+    &2{
+        height: px2Rem(1160);
+        background: url(../img/mirror_02.jpg) no-repeat;
+        background-size: px2Rem(1080) px2Rem(1160);
+    }
+    &3{
+        height: px2Rem(493);
+        background: url(../img/mirror_03.jpg) no-repeat;
+        background-size: px2Rem(1080) px2Rem(493);
+    }
+    &4{
+        height: px2Rem(1300);
+        background: url(../img/mirror_04.jpg) no-repeat;
+        background-size: px2Rem(1080) px2Rem(1300);
+    }
+    &5{
+        height: px2Rem(520);
+        background: #cdf2ff;
+    }
+    &6{
+        height: px2Rem(350);
+        background: url(../img/mirror_06.jpg) 0 px2Rem(-24) no-repeat;
+        background-size: px2Rem(1080) px2Rem(374);
+    }
+    &4-0{
+        width:100%;
+        background:#cdf2ff;
+    }
+    .c{
+        width:px2Rem(960);
+        margin:auto;
+        font-family: "microsoft yahei";
+        font-size:px2Rem(36);
+        color:#3f8bd0;
+        position: relative;
+        &-info{
+            position: relative;
+            padding-top:px2Rem(40);
+            padding-bottom:px2Rem(50);
+            .logo{
+                width:px2Rem(270);
+                height:px2Rem(270);
+                background: url(../img/mirror-logo.png) no-repeat;
+                background-size: contain;
+                position: absolute;
+                left:px2Rem(-10);
+                top:px2Rem(24);
+            }
+            .intro{
+                margin:0 px2Rem(100) 0 px2Rem(260);
+                p{
+                    letter-spacing: px2Rem(5);
+                    line-height: 1.3;
+                    &.h{
+                        font-size:px2Rem(68);
+                        margin-top:px2Rem(6);
+                        margin-bottom:px2Rem(10);
+                        position: relative;
+                        left:px2Rem(-30);
+                    }
+                }                
+            }
+            .detail{
+                width:px2Rem(30);
+                font-size:px2Rem(30);
+                font-weight: bold;
+                border:px2Rem(5) solid #3f8bd0;
+                border-radius: px2Rem(10);
+                padding:px2Rem(16) px2Rem(30);
+                position: absolute;
+                right:0;
+                top:px2Rem(50);
+            }
+        }
+        &-v{
+            height: px2Rem(540);
+            margin-top:px2Rem(100);
+            .ypw-video{
+                 video{
+                    width:px2Rem(960);
+                    height: px2Rem(540);
+                    position: relative;
+                }
+            }
+        }
+       &-bs{
+            position: relative;
+            height:px2Rem(128);
+            margin-top: px2Rem(90);
+            .btn{
+                display: block;
+                text-align: center;
+                width: px2Rem(440);
+                height: px2Rem(128);
+                line-height: px2Rem(128);
+                border-radius: px2Rem(8);
+                font-size: px2Rem(60);
+                letter-spacing: px2Rem(10);
+                color:#fff;
+                position: absolute;
+                top:0;
+                background: #0395e0;
+                &.buy{
+                    left:0;
+                }
+                &.share{
+                    right:0;
+                }
+                .reflect{
+                    width: px2Rem(440);
+                    height: px2Rem(90);
+                    background: url(../img/btn-re.png) no-repeat;
+                    background-size: contain;
+                    position: absolute;
+                    left:0;
+                    top:px2Rem(128);
+                }
+            }
+        }
+        &-text{
+            padding-top:px2Rem(72);
+        }
+        &-ps{
+            float: right;
+            font-size:px2Rem(32);
+            color:#fff;
+            position: relative;
+            top:px2Rem(50);
+        }
+    }
+}
+.ww-share-tips{
+    display: none;
+    width:100%;
+    height: 100%;
+    position: fixed;
+    left:0;
+    top:0;
+    z-index: 99999;
+    background: rgba(0,0,0,.5);
+    .tips-dialog{
+        width:5rem;
+        height:1.2rem;
+        line-height: 1.2rem;
+        text-align: center;
+        font-family: "microsoft yahei";
+        background: #acfbf8;
+        font-size:0.48rem;
+        border-radius: 0.05rem;
+        position: absolute;
+        right:0.28rem;
+        top:2rem;
+        .ico-share{
+            display: inline-block;
+            width:0.6rem;
+            height:0.6rem;
+            margin:0 0.1rem;
+            vertical-align: middle;
+            position: relative;
+            top:-0.03rem;
+            background: url(../img/ico-share.png) no-repeat;
+            background-size: contain;
+        }
+        .pointer{
+            width:0.06rem;
+            height:1.5rem;
+            position: absolute;
+            bottom: 1.2rem;
+            right: 0.3rem;
+            background: #acfbf8;
+            &:after{
+                content: "";
+                display: block;
+                width:0.2rem;
+                height: 0.2rem;
+                border-radius: 50%;
+                background: #acfbf8;
+                position: absolute;
+                top:-0.08rem;
+                left:-0.075rem;
+            }
+        }
+    }
+}

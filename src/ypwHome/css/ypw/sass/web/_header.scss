@@ -1,0 +1,78 @@
+
+.ypw-header{
+    width:1200px;
+    margin:auto;
+    position: relative;
+    .logo{
+        position: absolute;
+        left:0;
+        top:8px;
+    }
+    .ypw-nav{
+        position: absolute;
+        left:220px;
+        top:21px;
+        >li{
+            float: left;
+            height:36px;
+            line-height: 36px; 
+            padding:0 10px;
+            margin-right:15px;
+            a{
+                color: $default-text;
+            }
+            &.active{
+                color:$mute-text;
+                a{
+                    color:$mute-text;
+                }
+            }
+            &:hover{
+                @include boxShadow(0 0 3px 2px #e2f5f4);
+                @include borderRadius(4px);
+            }
+        }
+    }
+    .ypw-user{
+        position: absolute;
+        right: 0;
+        top:24px;
+        .login-before{
+            .go-login{
+                color:$mute-text;
+                cursor: pointer;
+            }
+        }
+        .login-after{
+            .portrait{
+                display: inline-block;
+                position: relative;
+                img{
+                    width: 30px;
+                    height: 30px;
+                    vertical-align: middle;
+                    @include borderRadius(50%);
+                }
+//              &:hover{
+//                  &:after{
+//                      content: "";
+//                      display: block;
+//                      width:100%;
+//                      height: 100%;
+//                      background:rgba(255,255,255,.2);
+//                      position: absolute;
+//                      left: 0;
+//                      top:0;
+//                      @include borderRadius(50%);
+//                  }
+//              }
+                
+            }
+            .logout{
+                color:$mute-text;
+                cursor: pointer;
+                margin-left: 5px;
+            }
+        }
+    }
+}

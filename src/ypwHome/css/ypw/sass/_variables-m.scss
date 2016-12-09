@@ -1,0 +1,25 @@
+$baseFontSize:100 !default;
+$rate:1.2;
+@function toRem($px){
+    @return ($px / $baseFontSize / $rate) * 1rem;
+}
+
+
+$font-default:toRem(36);
+$font-big:toRem(48);
+$font-middle:toRem(42);
+$font-small:toRem(30);
+$font-mini:toRem(24);
+
+$body-bg: #EBEBEB; 
+$content-bg: #fff; 
+
+$default-text: #808080; 
+$common-text: #999;  
+$stress-text:#333; 
+$mute-text:#00b4b4;
+$black-text:#000;
+
+$label-text:#fff; 
+
+$edge:toRem(36);

@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<meta content="yes" name="apple-mobile-web-app-capable">     
+		<meta content="black" name="apple-mobile-web-app-status-bar-style">     
+		<meta content="telephone=no" name="format-detection">
+		<title>vvvv</title>
+		<style type="text/css">
+			video::-webkit-media-controls {  
+			    display:none !important;
+			}
+			html,body{
+				width:100%;
+				height:100%;
+			}
+			video{
+				display: block;
+			}
+			button{
+				position: absolute;
+				left:0;
+				top:0;
+				z-index: 99;
+			}
+			#video1{
+				position: absolute;
+				top: 0;
+			    left: 0;
+				z-index: 1;
+			}
+			#video2{
+			    position: absolute;
+			    top: 0;
+			    left: 0;
+			    z-index: 2;
+			    visibility: hidden;
+			}
+			.ddd{
+				width:20px;
+				height:20px;
+				border-radius: 50%;
+				background: #fff;
+				position: absolute;
+				left:50%;
+				top:50%;
+				z-index: 9999;
+			}
+		</style>
+	</head>
+	<body>
+		<button id="play" style="font-size:100px">play</button>
+		<video id="video1" width="200" height="400" controls="false"  src="res/1.1.mp4" type="video/mp4" x5-video-player-type="h5">
+		</video>
+		<video id="video2" width="200" height="400" controls="false"  loop="true"  webkit-playsinline playsinline  src="http://gameapp.fp.ps.netease.com/file/57f8b0615e60279bed7065afEPiuXjBO" type="video/mp4" x5-video-player-type="h5">
+		</video>
+		<div class="ddd"></div>
+		<script type="text/javascript">
+			var play = document.querySelector("#play");
+			var video1 = document.querySelector("#video1");
+			var video2 = document.querySelector("#video2");
+			video1.width = document.body.offsetWidth;
+			video1.height = document.body.offsetHeight;
+			video2.width = document.body.offsetWidth;
+			video2.height = document.body.offsetHeight;
+			//video2.style.left="50%";
+			play.onclick = function(){
+				video2.play();
+				setTimeout(function(){
+					video1.play();
+//					video2.style.visibility = "visible";
+				},700);
+				setTimeout(function(){
+					video2.style.visibility = "visible";
+				},3133);
+			}
+			//播放结束
+			video2.addEventListener("ended",function(){
+//				video2.play();
+alert("bofang jieshu ");
+				video2.style.visibility = "hidden";
+			});
+			//监听时间更新
+//			video1.addEventListener("timeupdate",function(){
+//				var curTime = parseInt(this.currentTime);
+//				var duration = parseInt(this.duration);
+//				if (duration != 0 && curTime === duration) {
+//		            // 播放结束、
+//		            video2.play();
+//					video2.style.visibility = "visible";
+//		        }
+//			});
+		</script>
+	</body>
+</html>

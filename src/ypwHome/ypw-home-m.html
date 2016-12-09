@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<meta content="yes" name="apple-mobile-web-app-capable">     
+		<meta content="black" name="apple-mobile-web-app-status-bar-style">     
+		<meta content="telephone=no" name="format-detection">
+		<link rel="shortcut icon"  href="http://gameapp.fp.ps.netease.com/file/582e6bab0699e2125e34b6b1F7N6l2GF"/>
+		<title>游品味</title>
+		<link rel="stylesheet" type="text/css" href="../../dist/ypwHome/css/ypw/ypw-m.css"/>
+		<script type="text/javascript">
+			(function (doc, win) {
+			    var docEl = doc.documentElement,
+			        resizeEvt = 'orientationchange' in window ? 'orientationchange' : 'resize',
+			        recalc = function () {
+			            var clientWidth = docEl.clientWidth;
+			            if (!clientWidth) return;
+			            if(clientWidth>=900){
+			                docEl.style.fontSize = '100px';
+			            }else if(clientWidth <= 320){
+							return ;
+			            }else{
+			                docEl.style.fontSize = 100 * (clientWidth / 900) + 'px';
+			            }
+			            document.body.style.visibility = "visible";
+			        };
+			
+			    if (!doc.addEventListener) return;
+			    win.addEventListener(resizeEvt, recalc, false);
+			    doc.addEventListener('DOMContentLoaded', recalc, false);
+			})(document, window);
+		</script>
+	</head>
+	<body style="visibility: hidden;">
+		<header>
+			<div class="menu" id="menu"><i class="ico ico-72 ico-menu"></i></div>
+			<div class="logo"></div>
+		</header>
+		<div class="ypw-float-ad">
+			<span class="close"><i class="ico ico-64 ico-close-white"></i></span>
+			<span class="logo"><i class="ico ico-90 ico-logo"></i></span>
+			<dl>
+				<dt>游品位 全球精品手游平台</dt>
+				<dd>安卓客户端</dd>
+			</dl>
+			<div class="download"><i class="ico ico-48 ico-download"></i>下载</div>
+		</div>
+		<section class="ypw-left">
+			<div class="mask"></div>
+			<div class="ypw-menu">
+				<span class="ypw-back"><i class="ico ico-72 ico-back"></i></span>
+				<div class="user">
+					<img src="images/ypw/img_headnone.png"/>
+					<div class="h">欢迎来到游品位！</div>
+				</div>
+				<div class="b">
+					<div class="btn btn-primary" id="btnLogin">登录</div>
+					<div class="btn btn-primary" id="btnRegister">注册</div>
+				</div>
+			</div>
+		</section>
+		<div class="ypw-login-dialog" >
+			<div class="logo"></div>
+			<div class="close"><i class="ico ico-72 ico-close"></i></div>
+			<div class="drawer">
+				<div id="loginArea">
+					<ul class="ypw-tab"> 
+					   	<li class="active"><a href="javascript:void(0)">手机登录</a></li> 
+					   	<li><a href="javascript:void(0)">网易邮箱登录</a></li> 
+				  	</ul> 
+					<div class="ypw-panels"> 
+					   	<div class="ypw-panel">
+					   		<div class="form-area" id="loginArea">
+					   			<div class="form-control prefix">
+					   				<span class="addon">+86</span>
+					   				<input type="number" class="input-phone" id="phone" placeholder="请输入手机号"/>
+					   			</div>
+					   			<div class="form-control verify-code">
+					   				<input type="number" class="input-code" placeholder="请输入验证码"/>
+					   				<span class="btn btn-disabled btn-getcode">获取</span>
+					   			</div>
+					   			<div class="form-control mbmore">
+					   				<span class="ypw-checkbox checked autoLogin">
+					   					<input type="checkbox"  />
+					   					<i class="ico ico-36 ico-choose"></i>
+					   				</span>
+					   				<span class="ypw-checkbox-text">下次自动登录</span>
+					   			</div>
+					   			<div class="form-control verify-error" style="display: block;"></div>
+					   			<div class="form-control form-full">
+					   				<span class="btn btn-disabled verify-login">验证并登录</span>
+					   			</div>
+					   		</div>
+					   	</div> 
+					   	<div class="ypw-panel" style="display: none;">
+					   		<div class="form-area">
+					   			<div class="form-control form-full">
+					   				<input type="text" id="email" placeholder="请输入网易邮箱账号"/>
+					   			</div>
+					   			<div class="form-control form-pwd">
+					   				<input type="password" id="emailPwd" placeholder="请输入密码"/>
+					   				<span class="ico ico-48 ico-openeye" id="pwdEye"></span>
+					   			</div>
+					   			<div class="form-control mbmore">
+					   				<span class="ypw-checkbox checked autoLogin" >
+					   					<input type="checkbox"  />
+					   					<i class="ico ico-36 ico-choose"></i>
+					   				</span>
+					   				<span class="ypw-checkbox-text">下次自动登录</span>
+					   				<a class="forget-pwd" href="http://reg.163.com/resetpwd/index.do" target="_blank">忘记密码？</a>
+					   			</div>
+					   			<div class="form-control verify-error" style="display: none;"></div>
+					   			<div class="form-control form-full">
+					   				<span class="btn btn-disabled" id="emailLogin">登录</span>
+					   			</div>
+					   		</div>
+					   	</div> 
+				 	</div>
+			 	</div>
+			  	<div id="registerArea" style="display: none;">
+			  		<div class="form-area" id="registerArea">
+			   			<div class="form-control prefix">
+			   				<span class="addon">+86</span>
+			   				<input type="number" class="input-phone" id="phone" placeholder="请输入手机号"/>
+			   			</div>
+			   			<div class="form-control verify-code">
+			   				<input type="number" class="input-code" placeholder="请输入验证码"/>
+			   				<span class="btn btn-disabled btn-getcode">获取</span>
+			   			</div>
+			   			<div class="form-control mbmore">
+			   				<span class="ypw-checkbox checked autoLogin">
+			   					<input type="checkbox"  />
+			   					<i class="ico ico-36 ico-choose"></i>
+			   				</span>
+			   				<span class="ypw-checkbox-text">下次自动登录</span>
+			   			</div>
+			   			<div class="form-control verify-error" style="display: none;"></div>
+			   			<div class="form-control form-full">
+			   				<span class="btn btn-disabled verify-login">注册</span>
+			   			</div>
+			   		</div>
+			  	</div> 
+			</div>
+		</div>
+		<div class="main" >
+			<div class="content">
+				<div class="ypw-lumps">
+					<div class="ypw-lump">
+						<div class="ypw-lump-head">
+							<img src="http://gameapp.fp.ps.netease.com/file/57f4cbd0143cfa0ec35ed720Hdj1gg9G"/>
+							<dl>
+								<dt>2016.11.04</dt>
+								<dd>Vertigo Racing马路杀手<span class="label label-beta-soon"><i class="ico ico-36 ico-clock"></i><em>即将开测</em></span></dd>
+							</dl>
+						</div>
+						<div class="ypw-lump-body">
+							<div class="img">
+								<img class="lazy-img" data-origin="http://gameapp.fp.ps.netease.com/file/57d7d08796dee441a2955653t34VjiHz" src="http://gameapp.fp.ps.netease.com/file/581fe9cc143cfa0fca63ffc926mjLibD"/>
+							</div>
+							<div class="intro-h">公路上的自定义战斗飞船，姜敌人或成像素放啊快</div>
+							<div class="intro-c">像素解惑低多边形风格的画面表现，自助建造独特飞船，多种武器任意打在；疯狂而符合物理原理的集体制作，获得创造的成就感</div>
+						</div>
+						<div class="ypw-lump-foot">
+							<ul>
+								<li><img src="http://tva1.sinaimg.cn/crop.0.0.180.180.50/7fa03a7fjw1e8qgp5bmzyj2050050aa8.jpg" /></li>
+								<li>传说的背影</li>
+								<li>推荐</li>
+							</ul>
+							<span class="corner"><i class="ico ico-48 ico-download"></i><em>下载</em></span>
+							<!--<span class="corner"><i class="ico ico-yozuan"></i><em>0.01<em class='ori-p'>0.02</em></em></span>-->
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="ypw-load-more" id="loadMore">
+			<div class="loading">
+				正在加载 请稍后···
+			</div>
+		</div>
+		<footer>
+			<span class="logo"></span>
+			<ul class="ypw-share">
+				<li>
+					<span><i class="ico ico-90 ico-qq"></i></span>
+					<div class="ypw-share-panel ypw-share-panel-qq">
+						<span class="ico ico-pointer"></span>
+						<ul>
+							<li>游品位玩家大本营1群  190786398</li>
+							<li>游品位玩家大本营2群  516065009</li>
+							<li>游品位玩家大本营3群  436422523</li>
+						</ul>
+					</div>
+				</li>
+				<li>
+					<span><i class="ico ico-90 ico-wexin"></i></span>
+					<div class="ypw-share-panel ypw-share-panel-twocode">
+						<span class="ico ico-pointer"></span>
+						<img src="http://gameapp.fp.ps.netease.com/file/582c6c860699e24e956af5abqtC72ymb"/>
+					</div>
+				</li>
+				<li>
+					<span><i class="ico ico-90 ico-yixin"></i></span>
+					<div class="ypw-share-panel ypw-share-panel-twocode">
+						<span class="ico ico-pointer"></span>
+						<img src="http://gameapp.fp.ps.netease.com/file/582c6c860699e24e956af5abqtC72ymb"/>
+					</div>
+				</li>
+				<li>
+					<span><i class="ico ico-90 ico-weibo"></i></span>
+					<div class="ypw-share-panel ypw-share-panel-twocode">
+						<span class="ico ico-pointer"></span>
+						<img src="http://gameapp.fp.ps.netease.com/file/582c6c860699e24e956af5abqtC72ymb"/>
+					</div>
+				</li>
+			</ul>
+			<div class="copyright">
+			 	<div>网易公司版权所有©1997-2016</div>
+			 	<div>Copyright ©ypw.163.com All Rights Reserved.	</div>
+			 	<div>
+			 		<span>浙B1.B2-20090185</span>
+			 		<span>浙网文【2016】0155-055号</span>
+			 	</div>
+			 </div>
+		</footer>
+		<script src="../common/js/jquery-3.1.1.min.js" type="text/javascript" charset="utf-8"></script>
+		<script src="../common/js/template.js" type="text/javascript" charset="utf-8"></script>
+		<script src="../common/js/tool-frontend.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/ypw/ypw-login-m.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/ypw/ypw-home-m.js" type="text/javascript" charset="utf-8"></script>
+		<script type="text/javascript">
+			(function(){
+				for (var i = 0; i < 5; i++) {
+					var $lump = $(".ypw-lumps>.ypw-lump:first").clone();
+					if(i == 0){
+						$lump.find(".label").removeClass("label-beta-soon").addClass("label-beta-ing").find("em").text("内测中");
+					}else if(i == 1){
+						$lump.find(".label").removeClass("label-beta-soon").addClass("label-beta-end").find("em").text("内测结束");
+					}else if(i == 2){
+						$lump.find(".label").removeClass("label-beta-soon").addClass("label-pay").find(".ico").removeClass("ico-clock").addClass("ico-yozuan").next().text("付费游戏");
+					}
+					$lump.appendTo($(".ypw-lumps"));
+				}
+				FETool.lazyImg();	
+			})();
+		</script>
+	</body>
+</html>

@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<meta content="yes" name="apple-mobile-web-app-capable">     
+		<meta content="black" name="apple-mobile-web-app-status-bar-style">     
+		<meta content="telephone=no" name="format-detection">
+		<title>独立游戏</title>
+		<link rel="stylesheet" type="text/css" href="indieGame.css"/>
+		<script type="text/javascript">
+			(function (doc, win) {
+		        var docEl = doc.documentElement,
+		            resizeEvt = 'orientationchange' in window ? 'orientationchange' : 'resize',
+		            recalc = function () {
+		                var clientWidth = docEl.clientWidth;
+		                if (!clientWidth) return;
+		                if(clientWidth>=900){
+		                    docEl.style.fontSize = '100px';
+		                }else{
+		                    docEl.style.fontSize = 100 * (clientWidth / 900) + 'px';
+		                }
+		            };
+		
+		        if (!doc.addEventListener) return;
+		        win.addEventListener(resizeEvt, recalc, false);
+		        doc.addEventListener('DOMContentLoaded', recalc, false);
+		    })(document, window);
+		</script>
+	</head>
+	<body promotionId="{{promotion.id}}">
+		<section class="s s1"></section>
+		<section class="s s2"></section>	
+		<section class="s s3"></section>
+		<section class="s s4"></section>
+		<section class="s">
+			<div class="t t1"></div>
+			<div class="h">游戏介绍：</div>
+			<div class="intro">光芒拨开笼罩的黑暗，引导修女穿越被毁灭的家园。召集追随者，用你的身体保护他们，给予他们力量，让光芒照到更远的地方。最后……这一切的始作俑者终将被找到，天诛也必将对其施加。</div>
+			<div class="pic">
+				<img class="lazy-img" data-origin="gif/beetwo1.gif" src="default-bg.jpg"/>
+				<img class="lazy-img" data-origin="gif/beetwo2.gif" src="default-bg.jpg"/>
+				<img class="lazy-img" data-origin="gif/beetwo3.gif" src="default-bg.jpg"/>
+			</div>
+			<ul class="winner">
+				<li>获奖小组：雷亚</li>
+				<li>组员：张添翼、张珂珂、王嘉琦、Moy</li>
+			</ul>
+		</section>
+		<section class="s">
+			<div class="t t2"></div>
+			<div class="h">游戏介绍：</div>
+			<div class="intro">当铁甲小宝遇上铁甲小宝...再也没有什么好怕的的....</div>
+			<div class="pic">
+				<img class="lazy-img narrow" data-origin="gif/tiejia1.gif" src="default-bg.jpg"/>
+				<img class="lazy-img narrow" data-origin="gif/tiejia2.gif" src="default-bg.jpg"/>
+			</div>
+			<ul class="winner">
+				<li>获奖小组：碎片游戏</li>
+				<li>组员：刘洋、郑文琳、何柯</li>
+			</ul>
+		</section>
+		<section class="s">
+			<div class="t t3"></div>
+			<div class="h">游戏介绍：</div>
+			<div class="intro">游戏中两个一黑一白的球形小精灵是我们自身的两种人格，一种代表阳光，一种代表黑暗，也是人内心中的“阳光”与“消极”的两个极端...玩家需要操控这两个行走方向相反的小精灵，用身后连在一起的线缠绕住各自的能量体，再融为一体。</div>
+			<div class="pic">
+				<img class="lazy-img" data-origin="gif/Fetter1.gif" src="default-bg.jpg"/>
+				<img class="lazy-img" data-origin="gif/Fetter2.gif" src="default-bg.jpg"/>
+				<img class="lazy-img" data-origin="gif/Fetter3.gif" src="default-bg.jpg"/>
+			</div>
+			<ul class="winner">
+				<li>获奖小组：Magic Light</li>
+				<li>组员：李青云、覃硕、陈诺、莫燕敏</li>
+			</ul>
+		</section>
+		<section class="s">
+			<div class="t t4"></div>
+			<div class="h">游戏介绍：</div>
+			<div class="intro">这是一个看似很和平的小村庄，你是一个云游商人，到此地来进行对自己有利的以物换物的交易。你的任务是通过观察村民对话的蛛丝马迹来阻止这些黑化事件的发生。处理不好的话，自己也会惨遭毒手哦！本游戏总共有11个结局，包含一个真结局。</div>
+			<div class="pic">
+				<img class="lazy-img" data-origin="gif/richman1.gif" src="default-bg.jpg"/>
+				<img class="lazy-img" data-origin="gif/richman2.gif" src="default-bg.jpg"/>
+				<img class="lazy-img" data-origin="gif/richman3.gif" src="default-bg.jpg"/>
+			</div>
+			<ul class="winner">
+				<li>获奖小组：草花4</li>
+				<li>组员：林徐杰、林秦昌、林舒宇、林骁、吴康养</li>
+			</ul>
+		</section>
+		<section class="s s5"></section>
+		<section class="s s6"></section>
+		<script src="../grow/js/jquery-1.11.1.min.js" type="text/javascript" charset="utf-8"></script>
+		<script src="../grow/js/tool-frontend.js" type="text/javascript" charset="utf-8"></script>
+		<script type="text/javascript">
+			$(function(){
+				FETool.statsReport({type:"view_new",icode:$("body").attr("promotionId")});
+				//图片懒加载
+				FETool.lazyImg();
+			});
+		</script>
+	</body>
+</html>

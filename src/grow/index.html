@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<meta content="yes" name="apple-mobile-web-app-capable">     
+		<meta content="black" name="apple-mobile-web-app-status-bar-style">     
+		<meta content="telephone=no" name="format-detection">
+		<title></title>
+		<link rel="stylesheet" type="text/css" href="css/ypw-video.css"/>
+		<link rel="stylesheet" type="text/css" href="css/style.css"/>
+		<script type="text/javascript">
+			(function (doc, win) {
+		        var docEl = doc.documentElement,
+		            resizeEvt = 'orientationchange' in window ? 'orientationchange' : 'resize',
+		            recalc = function () {
+		                var clientWidth = docEl.clientWidth;
+		                if (!clientWidth) return;
+		                if(clientWidth>=900){
+		                    docEl.style.fontSize = '100px';
+		                }else{
+		                    docEl.style.fontSize = 100 * (clientWidth / 900) + 'px';
+		                }
+		            };
+		
+		        if (!doc.addEventListener) return;
+		        win.addEventListener(resizeEvt, recalc, false);
+		        doc.addEventListener('DOMContentLoaded', recalc, false);
+		    })(document, window);
+	</script>
+	</head>
+	<body>
+		<section class="s s1"></section>
+		<section class="s s2">
+			<div class="c">
+				<div class="c-v">
+					<div class="ypw-video">
+						<video id="ypwVideo" preload="none" controls="false" poster="img/pre.jpg" src="http://gameapp.fp.ps.netease.com/file/57f8b0615e60279bed7065afEPiuXjBO" type="video/mp4">
+						</video>
+					</div>
+				</div>
+				<div class="c-h" id="hdDetail" data-protocol-check="schemeHost" data-ypw-url="ypw://event_game_paid/5">
+					<div class="logo"></div>
+					<div class="info">
+						<div class="title"></div>
+						<div class="num">一颗种子的故事</div>
+					</div>
+				</div>
+				<div class="c-bs">
+					<span class="btn buy" data-protocol-check="schemeHost" data-ypw-url="ypw://event_game_paid/5">1元购买</span>
+					<span class="btn share" data-protocol-check="share" data-ypw-fun="showShareTips" data-ypw-fun="showShareTips" >分享给朋友</span>
+				</div>
+				<div class="c-p">
+					<p>《万物生长》曾获AppStore 2015年度精选。在中国独立游戏嘉年华大赛上获得最佳移动游戏奖。这次很荣幸能得到开发组的青睐，选择在游品位上独家发售这款作品的安卓版。</p>
+					<p>这款游戏画面极为精致且具有感染力，音乐更是游戏另一亮点，空灵温婉。小芽破土而出的那一刻整个人都被治愈了。</p>
+				</div>
+				<div class="c-pl">
+					<p>游品位将从10月10日-10月30日内，购买《万物生长》的小伙伴中抽奖，奖品有YO仔抱枕*10、PS4 一台。</p>
+					<p>购买并分享给朋友的前200用户，会额外得一份《万物生长》，在游品位内可赠送给朋友，让更多人看见国产独立游戏。</p>
+				</div>
+				<div class="c-f">
+					有疑问请加游品位QQ群找客服喔~2群群号 516065009；3群群号 436422523；喵咕酱活动答疑群 562282824。
+				</div>
+			</div>
+		</section>
+		<div class="ww-share-tips" id="shareTips">
+			<div class="tips-dialog">
+				<span>点击右上角<i class="ico-share"></i>分享</span>
+				<span class="pointer"></span>
+			</div>
+		</div>
+		<script src="js/jquery-1.11.1.min.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/tool-frontend.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/ypw-video.js" type="text/javascript" charset="utf-8"></script>
+		<script type="text/javascript">
+			function showShareTips(){
+				var shareTips = document.querySelector("#shareTips");
+				shareTips.style.display = "block";
+				shareTips.onclick = function(){
+					shareTips.style.display = "none";
+				}
+			}
+			$(function(){
+				FETool.statsReport({type:"view",icode:"grow"});
+			});
+		</script>
+	</body>
+</html>

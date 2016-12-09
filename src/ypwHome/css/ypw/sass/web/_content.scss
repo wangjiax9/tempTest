@@ -1,0 +1,387 @@
+
+.ypw-lump{
+    width:740px;
+    height: 387px;
+    background: $content-bg;
+    padding: 30px;
+    margin-bottom: 20px;
+    position: relative;
+    @include boxShadow(0 0 3px 3px #e9f2f6);
+    &:hover{
+        @include boxShadow(0 0 15px 3px #d6e5ea);
+        .poster{
+            img{
+                @include transform(scale(1.1));
+            }
+        }
+    }
+    .lump-head{
+        position: relative;
+        margin-bottom: 20px;
+        .logo{
+            position: absolute;
+            top:0;
+            left:0;
+            img{
+                width:60px;
+                height:60px;
+                @include borderRadius(10px);
+            }
+        }
+        dl.t{
+            padding-left:72px;
+            dd{
+                font-size: $font-big;
+                color:$stress-text;
+                .label{
+                    margin-left: 20px;
+                    position: relative;
+                    top: -3px;
+                }
+            }
+        }
+        dl.u{
+            position: absolute;
+            right: 0;
+            top:24px;
+            dd{
+                float:left;
+                margin-left: 10px;
+                font-size: $font-small;
+                line-height: $font-small;
+                color:$stress-text;
+                img{
+                    width: 30px;
+                    height: 30px;
+                    position: relative;
+                    top:-8px;
+                    @include borderRadius(50%);
+                }
+            }
+        }
+    }
+    .lump-body{
+        position: relative;
+        .poster{
+            width:482px;
+            height:305px;
+            overflow: hidden;
+            position: absolute;
+            left:0;
+            top:0;
+            img{
+                display: block;
+                width:482px;
+                height:305px;
+                @include transition(all .3s);
+            }
+        }
+        .intro{
+            width:228px;
+            position: absolute;
+            right: 0;
+            top:0;
+            &-h{
+                font-size: $font-middle;
+                color:$stress-text;
+                font-weight: bold;
+                margin-bottom: 30px;
+            }
+            &-c{
+                color:$default-text;
+            }
+        }
+    }
+    .ypw-download{
+        font-size:$font-middle;
+        color:$mute-text;
+        cursor: pointer;
+        padding:5px 12px;
+        position: absolute;
+        right: 18px;
+        bottom: 21px;
+        &:hover{
+            @include boxShadow(0 0 3px 2px #e2f5f4);
+            @include borderRadius(4px);
+        }
+    }
+}
+
+
+.ypw-self{
+    width:310px;
+    height:200px;
+    position: relative;
+    img.twocode{
+        width:130px;
+        height: 130px;
+    }
+    .logo-simple{
+        width:160px;
+        height:64px;
+        position: absolute;
+        left: 180px;
+        top:41px;
+        background: url(../../images/ypw/pic-logo-2.png) no-repeat;
+    }
+    .warn{
+        width:160px;
+        height:32px;
+        line-height: 32px;
+        font-size: $font-small;
+        color:$label-text;
+        text-align: center;
+        background:#98e2c9;
+        position: absolute;
+        left: 180px;
+        top:119px;
+        @include borderRadius(4px);
+    }
+    .attention-logo{
+        width:86px;
+        height:61px;
+        background: url(../../images/ypw/pic-followus.png) no-repeat;
+        position: absolute;
+        left:28px;
+        top:186px;
+    }
+    .ypw-share{
+        position: absolute;
+        left:148px;
+        top:200px;
+    }
+}
+.ypw-load-more{
+    text-align: center;
+    margin-bottom: 25px;
+    .loading{
+        margin:auto;
+        img{
+            vertical-align: middle;
+            position: relative;
+            top:-1px;
+            margin-right: 5px;
+        }
+    }
+}
+.ypw-share{
+    >li{
+        position: relative;
+        float: left;
+        margin-right: 16px;
+        cursor:pointer;
+        &:hover{
+            &:after{
+                content: "";
+                display: block;
+                width:100%;
+                height: 100%;
+                background:rgba(255,255,255,.2);
+                position: absolute;
+                left: 0;
+                top:-2px;
+                
+            }
+        }
+        &.active{
+            .ypw-share-panel{
+                display: block;
+            }
+        }
+    }
+    &-panel{
+        display: none;
+        min-width:50px;
+        min-height: 50px;
+        position: absolute;
+        z-index:99;
+        background: $content-bg;
+        @include borderRadius(4px);
+        @include boxShadow(0 0 5px 2px #c1dade);
+        &-qq{
+            width:220px;
+            height:66px;
+            padding:20px;
+            left:-112px;
+            top:-122px;
+            .ico-pointer{
+                position: absolute;
+                left:122px;
+                top:94px;
+            }
+            ul{
+                >li{
+                    font-size: $font-small;
+                    color:$default-text;
+                    margin-bottom: 3px;  
+                }
+            }
+        }
+        &-twocode{
+            width:100px;
+            height:100px;
+            left:-32px;
+            top:-115px;
+            .ico-pointer{
+                position: absolute;
+                left:44px;
+                top:88px;
+            }
+            img{
+                display: block;
+                width:96px;
+                height:96px;
+                position: absolute;
+                left:2px;
+                top:2px;
+            }
+        }
+    }    
+}
+
+.ypw-slist{
+    >li{
+        position: relative;
+        margin-bottom: 30px;
+        .logo{
+            img{
+                display: block;
+                width:60px;
+                height: 60px;
+                @include borderRadius(12px);
+            }
+        }
+        dl{
+            position: absolute;
+            left:74px;
+            top:2px;
+            dt{
+                font-size: $font-middle;
+                color:$stress-text;
+                margin-bottom: 2px;
+                @include ellipsis(236px);
+            }
+        }
+    }
+}
+.ypw-ruku{
+    padding-top: 2px;
+    margin-bottom: -30px;
+    .ypw-slist{
+        >li{
+            padding:10px;
+            margin:-10px -10px 20px -10px;
+            &:hover{
+                @include boxShadow(0 0 3px 2px #e2f5f4);
+                @include borderRadius(4px);
+            }
+            dl{
+                left:84px;
+                top:12px;
+            }
+        }
+        
+    }
+}
+.ypw-comments{
+    margin-top: -10px;
+}
+.ypw-comment{
+    margin-top:30px;
+    .ypw-slist{
+        margin-bottom: -15px;
+        >li{
+            .logo{
+                img{
+                    position: relative;
+                    top: 6px;
+                    width:48px;
+                    height: 48px;
+                }
+            }
+            dl{
+                left:62px;
+            }
+        }
+    }
+    .c-c{
+        font-size: $font-small;
+        background: #f8fbfd;
+        padding:15px;
+        position: relative;
+        &:hover{
+            background: #f2f7f9;
+            &:after{
+                content: "";
+                display: block;
+                width: 0;
+                height: 0;
+                border:6px solid transparent;
+                border-bottom-color: #f2f7f9;
+                position: absolute;
+                left:20px;
+                top:-12px;
+            }
+        }
+        &:after{
+            content: "";
+            display: block;
+            width: 0;
+            height: 0;
+            border:6px solid transparent;
+            border-bottom-color: #f8fbfd;
+            position: absolute;
+            left:20px;
+            top:-12px;
+        }
+        .c-text{
+            margin:5px 0;
+        }
+        .c-f{
+            height:24px;
+            position: relative;
+            color:$common-text;
+            .zan{
+                position: absolute;
+                right: 0;
+                top:0;
+            }
+            .ico-zan{
+                cursor: pointer;
+                margin-left: 5px;
+                top:-3px;
+            }
+        }
+    }
+}
+.ypw-contact{
+    height:80px;
+    >li{
+        margin-bottom: 6px;
+        color:$default-text;
+        span{
+            margin-left: 10px;
+        }
+    }
+}
+.ypw-mate{
+    margin-bottom:-14px;
+    >li{
+        margin-bottom: 14px;
+        color:$default-text;
+        img{
+            width: 24px;
+            height: 24px;
+            vertical-align: middle;
+            margin-right: 8px;
+            @include borderRadius(4px);
+        }
+        a{
+            vertical-align: middle;
+            color:$default-text;
+            &:hover{
+                color:$mute-text;
+            }
+        }
+    }
+}

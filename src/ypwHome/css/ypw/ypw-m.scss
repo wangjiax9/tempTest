@@ -1,0 +1,184 @@
+@import './sass/_mixin.scss';
+@import './sass/_variables-m.scss';
+@import './sass/m/_base-m.scss';
+@import './sass/m/_left-menu-m.scss';
+@import './sass/m/_footer-m.scss';
+header{
+    width:100%;
+    height:toRem(144);
+    background:$content-bg;
+    border-bottom: toRem(1) solid #ebebeb;
+    position: relative;
+    .menu{
+        position: absolute;
+        left:toRem(36);
+        top:toRem(35);
+    }
+    .logo{
+        width:toRem(188);
+        height:toRem(83);
+        background: url(../../images/ypw/pic_logo_mob.png) no-repeat;
+        background-size: contain;
+        position: absolute;
+        left:toRem(138);
+        top:toRem(30);
+    }
+}
+  
+.ypw-lump{
+    width:100%;
+    background: $content-bg;
+    margin-bottom: $edge;
+    &-head{
+        position: relative;
+        padding:$edge 0 0 $edge;
+        img{
+            width:toRem(96);    
+            height:toRem(96);
+            position: absolute;
+            left:$edge;
+            top:$edge;
+        }
+        dl{
+            padding-left:toRem(120);
+            dt{
+                display: block;
+                font-size:$font-small;
+                color:$default-text;
+            }
+            dd{
+                display: block;
+                font-size: $font-big;
+                color:$stress-text;
+                .label{
+                    margin-left: toRem(20);
+                    position: relative;
+                    top: toRem(-10);
+                }
+            }
+        }
+    }
+    &-body{
+        margin-top: toRem(24);
+        .img{
+            img{
+                display: block;
+                width:100%;
+            }
+        }
+        .intro-h{
+            color:$stress-text;
+            font-size:$font-middle;
+            font-weight: bold;
+            padding:0 $edge;
+            margin-top:$edge;
+        }
+        .intro-c{
+            color:$default-text;
+            padding:0 $edge;
+            margin-top:toRem(30);
+        }
+        
+    }
+    &-foot{
+        position: relative;
+        padding:0 $edge $edge;
+        margin-top:toRem(60);
+        ul{
+            &>li{
+                display: inline-block;
+                margin-right: toRem(18);
+                color:$default-text;
+                img{
+                    width:toRem(60);    
+                    height:toRem(60);
+                    vertical-align: middle;
+                    border-radius: 50%;
+                    position: relative;
+                    top:toRem(3);
+                }
+            }
+        }
+        .corner{
+            font-size:$font-middle;
+            color:$mute-text;
+            position: absolute;
+            right:$edge;
+            bottom:$edge;
+            em{
+                font-style: normal;
+            }
+            .ori-p{
+                font-size: $font-mini;
+                margin-left:toRem(5);
+                text-decoration: line-through;
+            }
+        }
+    }
+   
+}
+
+.ypw-float-ad{
+    width:100%;
+    height:toRem(162);
+    color:$label-text;
+    background: #3CCBCB;
+    position: fixed;
+    left:0;
+    bottom: 0;
+    z-index:900;
+    .close{
+        position: absolute;
+        left:toRem(30);
+        top:toRem(49);
+    }
+    .logo{
+        position: absolute;
+        left:toRem(124);
+        top:toRem(36);
+    }
+    dl{
+        
+        position: absolute;
+        left:toRem(230);
+        top:toRem(38);
+        dt{
+            display: block;
+        }
+        dd{
+            font-size: toRem(28);
+            margin-top:toRem(8);
+        }
+    }
+    .download{
+        width:toRem(240);
+        height:toRem(90);
+        line-height: toRem(90);
+        text-align: center;
+        cursor: pointer;
+        background: $content-bg;
+        color:$mute-text;
+        position: absolute;
+        right:toRem(36);
+        top:toRem(36);
+        border-radius: toRem(8);
+        .ico{
+            position: relative;
+            right: toRem(3);
+        }
+        
+    }
+}
+
+.ypw-load-more{
+    width:100%;
+    height:toRem(130);
+    background: #f4f4f4;
+    color: #ccc;
+    text-align: center;
+    .loading{
+        position: relative;
+        top:toRem(42);
+    }
+}
+

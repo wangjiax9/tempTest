@@ -1,0 +1,187 @@
+html, body, dl, dt, dd, p, img, a {
+  padding: 0;
+  margin: 0; }
+
+html {
+  -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%; }
+
+body {
+  background-color: #0f141d; }
+
+a {
+  text-decoration: none; }
+
+* {
+  outline: none;
+  -webkit-tap-highlight-color: transparent;
+  -webkit-focus-ring-color: transparent; }
+
+.s1 {
+  width: 9rem;
+  height: 8.73333rem;
+  background: url(../img/part1.jpg) no-repeat;
+  background-size: contain; }
+.s2 {
+  position: relative;
+  width: 9rem;
+  height: 21.475rem;
+  background: url(../img/part2.jpg) no-repeat;
+  background-size: contain; }
+
+.c {
+  width: 6.66667rem;
+  position: absolute;
+  left: 50%;
+  top: 1.16667rem;
+  text-align: center;
+  font-family: "microsoft yahei";
+  font-size: 0.26667rem;
+  color: #fff;
+  -webkit-transform: translateX(-50%);
+  -moz-transform: translateX(-50%);
+  -ms-transform: translateX(-50%);
+  -o-transform: translateX(-50%);
+  transform: translateX(-50%); }
+  .c-v {
+    margin: 0 auto 0.75rem;
+    height: 7.16667rem; }
+    .c-v .ypw-video {
+      left: 50%;
+      -webkit-transform: translateX(-50%);
+      -moz-transform: translateX(-50%);
+      -ms-transform: translateX(-50%);
+      -o-transform: translateX(-50%);
+      transform: translateX(-50%); }
+      .c-v .ypw-video video {
+        width: 4rem;
+        height: 7.1rem;
+        position: relative; }
+  .c-h {
+    height: 2.59167rem;
+    position: relative;
+    margin-bottom: 0.16667rem; }
+    .c-h .logo {
+      width: 2.50833rem;
+      height: 2.59167rem;
+      position: absolute;
+      left: 0;
+      top: 0;
+      background: url(../img/hh.png) no-repeat;
+      background-size: contain; }
+    .c-h .info .title {
+      width: 3.78333rem;
+      height: 0.9rem;
+      position: absolute;
+      right: 0.25rem;
+      top: 0.3rem;
+      background: url(../img/title.png) no-repeat;
+      background-size: contain; }
+    .c-h .info .num {
+      width: 3.83333rem;
+      height: 0.625rem;
+      line-height: 0.625rem;
+      text-align: center;
+      font-size: 0.4rem;
+      color: #a1c9d3;
+      background: #1e3d46;
+      -webkit-border-radius: 0.08333rem;
+      -moz-border-radius: 0.08333rem;
+      border-radius: 0.08333rem;
+      position: absolute;
+      right: 0.25rem;
+      bottom: 0.41667rem; }
+  .c-bs {
+    position: relative;
+    height: 1rem;
+    margin-bottom: 0.41667rem; }
+    .c-bs .btn {
+      display: block;
+      width: 2.96667rem;
+      height: 1rem;
+      line-height: 1rem;
+      font-size: 0.38333rem;
+      color: #fff;
+      position: absolute;
+      top: 0;
+      background: url(../img/btn-bg.jpg) no-repeat;
+      background-size: contain; }
+      .c-bs .btn:focus, .c-bs .btn:active, .c-bs .btn:hover {
+        background-color: transparent; }
+      .c-bs .btn.buy {
+        left: 0.13333rem; }
+      .c-bs .btn.share {
+        right: 0.13333rem; }
+  .c-p {
+    text-align: left;
+    font-size: 0.26667rem;
+    letter-spacing: 0.03333rem;
+    color: #7aa6b1;
+    margin: 0 0.1rem 0.29167rem; }
+    .c-p p {
+      margin-bottom: 0.38333rem; }
+  .c-pl {
+    width: 5.86667rem;
+    height: 2.34167rem;
+    padding: 0.35rem;
+    text-align: left;
+    font-size: 0.28333rem;
+    color: #fff;
+    background: url(../img/c-p-bg.jpg) no-repeat;
+    background-size: contain;
+    margin-bottom: 0.35rem; }
+  .c-f {
+    text-align: left;
+    color: #7aa6b1;
+    font-size: 0.25rem; }
+
+.ww-share-tips {
+  display: none;
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  left: 0;
+  top: 0;
+  z-index: 99;
+  background: rgba(0, 0, 0, 0.5); }
+  .ww-share-tips .tips-dialog {
+    width: 5rem;
+    height: 1.2rem;
+    line-height: 1.2rem;
+    text-align: center;
+    font-family: "microsoft yahei";
+    background: #acfbf8;
+    font-size: 0.48rem;
+    border-radius: 0.05rem;
+    position: absolute;
+    right: 0.28rem;
+    top: 2rem; }
+    .ww-share-tips .tips-dialog .ico-share {
+      display: inline-block;
+      width: 0.6rem;
+      height: 0.6rem;
+      margin: 0 0.1rem;
+      vertical-align: middle;
+      position: relative;
+      top: -0.03rem;
+      background: url(../img/ico-share.png) no-repeat;
+      background-size: contain; }
+    .ww-share-tips .tips-dialog .pointer {
+      width: 0.06rem;
+      height: 1.5rem;
+      position: absolute;
+      bottom: 1.2rem;
+      right: 0.3rem;
+      background: #acfbf8; }
+      .ww-share-tips .tips-dialog .pointer:after {
+        content: "";
+        display: block;
+        width: 0.2rem;
+        height: 0.2rem;
+        border-radius: 50%;
+        background: #acfbf8;
+        position: absolute;
+        top: -0.08rem;
+        left: -0.075rem; }
+
+/*# sourceMappingURL=style.css.map */

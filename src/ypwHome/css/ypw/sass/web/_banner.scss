@@ -1,0 +1,57 @@
+.ypw-banner{
+    position: relative;
+    .banner{
+        width:1200px;
+        height: 400px;
+        position: relative;
+        overflow: hidden;
+        >li{
+            position: absolute;
+            left:0;
+            top:0;
+            &.cur{
+                z-index: 99;
+            }
+            img{
+                display: block;
+                width:1200px;
+                height: 400px;
+            }
+        }  
+    }
+    .banner-index{
+        position: absolute;
+        left:540px;
+        top:370px;
+        z-index: 100;
+        >li{
+            float: left;
+            width:10px;
+            height: 10px;
+            cursor: pointer;
+            margin-right: 12px;
+            background: #f8fbfd;
+            @include boxShadow(0 0 2px #e2f5f4);
+            @include borderRadius(50%);
+            @include transition(width .5s);
+            &.cur{
+                width:30px;
+                @include borderRadius(4.5px);
+            }
+        }
+    }
+    .banner-page{
+        .page{
+            display: block;
+            cursor: pointer;
+            position: absolute;
+            top:182px;
+        }
+        .prev{
+            left:-56px;
+        }
+        .next{
+            right:-56px;
+        }
+    }
+}

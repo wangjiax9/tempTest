@@ -1,0 +1,119 @@
+$baseFontSize:100 !default;
+$rate:1.2;
+@function px2Rem($px){
+    @return ($px / $baseFontSize / $rate) * 1rem;
+}
+html,body,dl,dt,dd,p,img,a{ 
+    padding: 0;
+    margin: 0; 
+}
+html{-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;}
+body{
+    background-color: #b7f0cb;
+    font-family: "microsoft yahei";
+}
+a{
+    text-decoration: none;
+}
+*{
+  outline: none; 
+  -webkit-tap-highlight-color: transparent;  
+  -webkit-focus-ring-color: rgba(0, 0, 0, 0);
+}
+.s{
+    width:px2Rem(900);
+    font-size:px2Rem(38);
+    color:#1a4662;
+    display: block;
+    margin:auto;
+    &1{
+        width:px2Rem(1080);
+        height: px2Rem(620);
+        background: url(img/indie-bg-01.jpg) no-repeat;
+        background-size: px2Rem(1080) px2Rem(620);
+    }
+    &2{
+        height: px2Rem(408);
+        background: url(img/indie-bg-02.jpg) no-repeat;
+        background-size: px2Rem(900) px2Rem(408);
+    }
+    &3{
+        margin-top: px2Rem(35);
+        height: px2Rem(612);
+        background: url(img/indie-bg-03.jpg) no-repeat;
+        background-size: px2Rem(900) px2Rem(612);
+    }
+    &4{
+        margin-top: px2Rem(50);
+        height: px2Rem(180);
+        background: url(img/indie-bg-04.jpg) no-repeat;
+        background-size: px2Rem(900) px2Rem(180);
+    }
+    &5{
+        margin-top: px2Rem(50);
+        height: px2Rem(811);
+        background: url(img/indie-bg-05.jpg) no-repeat;
+        background-size: px2Rem(900) px2Rem(811);
+    }
+    &6{
+        margin-top: px2Rem(75);
+        margin-bottom: px2Rem(75);
+        height: px2Rem(745);
+        background: url(img/indie-bg-06.jpg) no-repeat;
+        background-size: px2Rem(900) px2Rem(745);
+    }
+    .t{
+        width:px2Rem(900);
+        &1{
+            margin-top: px2Rem(75);
+            height: px2Rem(150);
+            background: url(img/indie-t-01.jpg) no-repeat;
+            background-size: px2Rem(900) px2Rem(150);
+        }
+        &2{
+            margin-top: px2Rem(75);
+            height: px2Rem(155);
+            background: url(img/indie-t-02.jpg) no-repeat;
+            background-size: px2Rem(900) px2Rem(155);
+        }
+        &3{
+            margin-top: px2Rem(75);
+            height: px2Rem(154);
+            background: url(img/indie-t-03.jpg) no-repeat;
+            background-size: px2Rem(900) px2Rem(154);
+        }
+        &4{
+            margin-top: px2Rem(75);
+            height: px2Rem(152);
+            background: url(img/indie-t-04.jpg) no-repeat;
+            background-size: px2Rem(900) px2Rem(152);
+        }
+    }
+    .h{
+        font-size: px2Rem(42); 
+        font-weight: bold;
+        margin-top:px2Rem(70);   
+    }
+    .intro{
+        margin-top:px2Rem(30);
+    }
+    .pic{
+        text-align: center;
+        img{
+            display: block;
+            width:px2Rem(400*2.25);
+            height: px2Rem(225*2.25);
+            margin:px2Rem(40) auto 0;
+            &.narrow{
+                width:px2Rem(220*2.25);
+                height: px2Rem(390*2.25);
+            }
+        }
+    }
+    .winner{
+        list-style: none;
+        padding:px2Rem(40) px2Rem(60);
+        background: #88dbb8;
+        border-radius: px2Rem(15);
+    } 
+}

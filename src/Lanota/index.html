@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<meta content="yes" name="apple-mobile-web-app-capable">     
+		<meta content="black" name="apple-mobile-web-app-status-bar-style">     
+		<meta content="telephone=no" name="format-detection">
+		<title>Lanota</title>
+		<link rel="stylesheet" type="text/css" href="../MyVideo/css/ypw-video.css"/>
+		<link rel="stylesheet" type="text/css" href="../../dist/Lanota/css/lanota.css"/>
+		<script type="text/javascript">
+			(function (doc, win) {
+			    var docEl = doc.documentElement,
+			        resizeEvt = 'orientationchange' in window ? 'orientationchange' : 'resize',
+			        recalc = function () {
+			            var clientWidth = docEl.clientWidth;
+			            if (!clientWidth) return;
+			            if(clientWidth>=900){
+			                docEl.style.fontSize = '100px';
+			            }else if(clientWidth <= 320){
+							return ;
+			            }else{
+			                docEl.style.fontSize = 100 * (clientWidth / 900) + 'px';
+			            }
+			            document.body.style.visibility = "visible";
+			        };
+			
+			    if (!doc.addEventListener) return;
+			    win.addEventListener(resizeEvt, recalc, false);
+			    doc.addEventListener('DOMContentLoaded', recalc, false);
+			})(document, window);
+		</script>
+	</head>
+	<body promotionId="{{promotion.id}}" style="visibility: hidden;">
+		<section class="s s1"></section>
+		<section class="s s2">
+			<div class="c-info" data-protocol-check="schemeHost" data-ypw-url="ypw://event_game/2849" data-custom-url="http://m.ypw.163.com/share/games/MDAwMDAwMjg0OQ==">
+			</div>
+		</section>
+		<section class="s s3">
+			<div class="c">
+				<div class="c-v">
+					<div class="ypw-video">
+						<video id="ypwVideo" preload="none" controls="false" poster="http://gameapp.fp.ps.netease.com/file/57c41cbb143cfac92d1a6371olr5cqpQ" src="http://gameapp.fp.ps.netease.com/file/57c4515a5e60275e87372d1eIdP9BBaF" type="video/mp4">
+						</video>
+					</div>
+				</div>
+				<div class="c-bs">
+					<span class="btn buy" data-protocol-check="schemeHost" data-ypw-url="ypw://event_game_paid/2849" data-custom-url="http://m.ypw.163.com/share/games/MDAwMDAwMjg0OQ=="><i class="reflect"></i>免费下载</span>
+					<span class="btn share" 
+						data-protocol-check="share" 
+						data-ypw-fun="showShareTips" 
+						data-isshare="{{promotion.is_share}}" 
+						data-shareurl="{{promotion.share_url}}" 
+						data-thumburl="{{promotion.thumb['url']}}" 
+						data-sharetitle="{{promotion.share_title}}" 
+						data-description="{{promotion.share_description}}" >
+							<i class="reflect"></i>分享快乐
+					</span>
+				</div>
+			</div>
+		</section>
+		<section class="s s4"></section>
+		<div class="ww-share-tips" id="shareTips">
+			<div class="tips-dialog">
+				<span>点击右上角<i class="ico-share"></i>分享</span>
+				<span class="pointer"></span>
+			</div>
+		</div>
+		<script src="../grow/js/jquery-1.11.1.min.js" type="text/javascript" charset="utf-8"></script>
+		<script src="../common/js/tool-frontend.js" type="text/javascript" charset="utf-8"></script>
+		<script src="../grow/js/ypw-video.js" type="text/javascript" charset="utf-8"></script>
+		<script type="text/javascript">
+			function showShareTips(){
+				var shareTips = document.querySelector("#shareTips");
+				shareTips.style.display = "block";
+				shareTips.onclick = function(){
+					shareTips.style.display = "none";
+				}
+			}
+			$(function(){
+				FETool.statsReport({type:"view_new",icode:$("body").attr("promotionId")});
+			});
+		</script>
+	</body>
+</html>

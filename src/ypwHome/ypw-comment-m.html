@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<meta content="yes" name="apple-mobile-web-app-capable">     
+		<meta content="black" name="apple-mobile-web-app-status-bar-style">     
+		<meta content="telephone=no" name="format-detection">
+		<title>评论模块</title>
+		<link rel="stylesheet" type="text/css" href="../../dist/ypwHome/css/ypw/ypw-comment-m.css"/>
+		<script type="text/javascript">
+			(function (doc, win) {
+			    var docEl = doc.documentElement,
+			        resizeEvt = 'orientationchange' in window ? 'orientationchange' : 'resize',
+			        recalc = function () {
+			            var clientWidth = docEl.clientWidth;
+			            if (!clientWidth) return;
+			            if(clientWidth>=900){
+			                docEl.style.fontSize = '100px';
+			            }else if(clientWidth <= 320){
+							return ;
+			            }else{
+			                docEl.style.fontSize = 100 * (clientWidth / 900) + 'px';
+			            }
+			            document.body.style.visibility = "visible";
+			        };
+			
+			    if (!doc.addEventListener) return;
+			    win.addEventListener(resizeEvt, recalc, false);
+			    doc.addEventListener('DOMContentLoaded', recalc, false);
+			})(document, window);
+		</script>
+	</head>
+	<body style="visibility: hidden;">
+		<div class="ypw-main">
+			<div class="ypw-content">
+				<div class="ypw-cmt-box">
+					<div class="ypw-cmt-publish" >
+						<div class="cmt-input">
+							<textarea id="publishWord" placeholder="写下你的评论吧~"></textarea>
+						</div>
+						<div class="cmt-action">
+							<div class="btn btn-small btn-primary">发表评论</div>
+							<div class="emot"><i class="ico ico-72 ico-emot"></i></div>
+						</div>
+						<div class="error-msg"></div>
+						<div class="emot-panels">
+							<div class="emot-panel" data-pos="0">
+								<dl>
+									<dd>(ง •̀_•́)ง</dd>
+									<dd>(￣∀￣)</dd>
+									<dd>(´・ω・`)</dd>
+									<dd>(｡˘•ε•˘｡)</dd>
+									<dd>( • ω - )</dd>
+									<dd>(｡☉౪ ⊙｡)</dd>
+									<dd>( ´◔ ‸◔`)</dd>
+									<dd>(｡・`ω´･)</dd>
+									<dd>(￣ε(#￣)</dd>
+									<dd>╮(╯▽╰)╭</dd>
+									<dd>(ノ｀Д´)ノ</dd>
+									<dd> (/≧▽≦/)</dd>
+									<dd>( ・◇・)？</dd>
+									<dd>Σ(ﾟдﾟ;)</dd>
+									<dd>ಥ_ಥ</dd>
+									<dd>( ^ω^)</dd>
+									<dd>(ΘωΘ)</dd>
+									<dd>（⊙ˍ⊙）</dd>
+									<dd>( ′ェ`）</dd>
+									<dd>（¯﹃¯）</dd>
+								</dl>
+								<dl>
+									<dd>(＞д＜)</dd>
+									<dd>（。_。）</dd>
+									<dd>（￣﹏￣）</dd>
+									<dd>(╬▔皿▔) </dd>
+									<dd>→_→</dd>
+									<dd>←_←</dd>
+									<dd>(=｀ω´=) </dd>
+									<dd>(〒︿〒)</dd>
+									<dd>（/ω＼）</dd>
+									<dd> _(:3 」∠)_</dd>
+								</dl>
+							</div>
+							<ul class="mark">
+								<li class="active"></li>
+								<li></li>
+							</ul>
+						</div>
+					</div>
+					<div class="cmt-h">
+						<span class="title">精彩评论</span>
+						<span class="num">3条</span>
+					</div>
+					<div class="ypw-cmt">
+						<div class="user-portrait">
+							<img src="http://tva1.sinaimg.cn/crop.0.0.664.664.50/9298ce79jw8f82g11rexoj20ig0igt9k.jpg"/>
+							<div class="label label-lv"><i class="ico ico-lv"></i><em>8</em></div>
+						</div>
+						<div class="cmt-dinner">
+							<div class="user">
+								<span class="nickname">魍魉凌虐的囹圄</span>
+								
+							</div>
+							<div class="dinner">两个多小时，游戏通关了，通关之后不仅怅然若失，不是说没有后续关卡了让我意犹未尽，而是如果世界上真的就这样没有病人了多好……言归正传，这游戏357，这三关最难，其中更数5令人发指。5是那种纯拼脸的关卡，转移概率超高。</div>
+							<div class="action">
+								<span class="time">11月11日</span>
+								<dl>
+									<dd class="to-zan"><em>123</em><i class="ico ico-48 ico-zan"></i></dd>
+									<dd class="to-reply">回复<em>(79)</em></dd>
+									<dd class="to-report">举报</dd>
+								</dl>
+							</div>
+							
+						</div>
+						<div class="ypw-cmt-box-sub">
+							<div class="ypw-cmt ypw-cmt-sub">
+								<div class="cmt-dinner cmt-dinner-sub">
+									<div class="dinner">
+										<span class="nickname">飞流液下地上湿：</span>
+										<span class="word">你这评论是什么鬼！！！我也是醉了哈哈哈哈有没有。你这评论是什么鬼！！！我也是醉了哈我也是醉了哈哈哈哈有没有。</span>
+									</div>
+									<div class="action">
+										<span class="time">11月11日</span>
+										<dl>
+											<dd class="to-zan"><em>123</em><i class="ico ico-48 ico-zan"></i></dd>
+											<dd class="to-reply">回复<em>(79)</em></dd>
+											<dd class="to-report">举报</dd>
+										</dl>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="ypw-page-roll pagintion" data-totalPage="10">
+						</div>
+					</div>
+					<div class="cmt-reply-box">
+						<div class="mask"></div>
+						<div class="reply-box">
+							<ul>
+								<li><span class="emot"><i class="ico ico-72 ico-emot"></i></span></li>
+								<li><div class="input" contenteditable="true"></div></li>
+								<li><span class="reply" id="reply">发送</span></li>
+							</ul>
+							<div class="emot-panels">
+								<div class="emot-panel" data-pos="0">
+									<dl>
+										<dd>(ง •̀_•́)ง</dd>
+										<dd>(￣∀￣)</dd>
+										<dd>(´・ω・`)</dd>
+										<dd>(｡˘•ε•˘｡)</dd>
+										<dd>( • ω - )</dd>
+										<dd>(｡☉౪ ⊙｡)</dd>
+										<dd>( ´◔ ‸◔`)</dd>
+										<dd>(｡・`ω´･)</dd>
+										<dd>(￣ε(#￣)</dd>
+										<dd>╮(╯▽╰)╭</dd>
+										<dd>(ノ｀Д´)ノ</dd>
+										<dd> (/≧▽≦/)</dd>
+										<dd>( ・◇・)？</dd>
+										<dd>Σ(ﾟдﾟ;)</dd>
+										<dd>ಥ_ಥ</dd>
+										<dd>( ^ω^)</dd>
+										<dd>(ΘωΘ)</dd>
+										<dd>（⊙ˍ⊙）</dd>
+										<dd>( ′ェ`）</dd>
+										<dd>（¯﹃¯）</dd>
+									</dl>
+									<dl>
+										<dd>(＞д＜)</dd>
+										<dd>（。_。）</dd>
+										<dd>（￣﹏￣）</dd>
+										<dd>(╬▔皿▔) </dd>
+										<dd>→_→</dd>
+										<dd>←_←</dd>
+										<dd>(=｀ω´=) </dd>
+										<dd>(〒︿〒)</dd>
+										<dd>（/ω＼）</dd>
+										<dd> _(:3 」∠)_</dd>
+									</dl>
+								</div>
+								<ul class="mark">
+									<li class="active"></li>
+									<li></li>
+								</ul>
+							</div>
+						</div>
+						<div class="error-msg"></div>
+					</div>
+				</div>
+				<div class="ypw-load-more" id="loadMore">
+					<div class="loading">
+						加载更多
+					</div>
+				</div>
+			</div>
+		</div>
+		<script src="../common/js/jquery-3.1.1.min.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/ypw/ypw-comment-m.js" type="text/javascript" charset="utf-8"></script>
+		<script type="text/javascript">
+			
+		</script>
+	</body>
+</html>

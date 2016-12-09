@@ -1,0 +1,101 @@
+html, body, dl, dt, dd, p, img, a {
+  padding: 0;
+  margin: 0; }
+
+html {
+  -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%; }
+
+body {
+  background-color: #b7f0cb;
+  font-family: "microsoft yahei"; }
+
+a {
+  text-decoration: none; }
+
+* {
+  outline: none;
+  -webkit-tap-highlight-color: transparent;
+  -webkit-focus-ring-color: transparent; }
+
+.s {
+  width: 7.5rem;
+  font-size: 0.31667rem;
+  color: #1a4662;
+  display: block;
+  margin: auto; }
+  .s1 {
+    width: 9rem;
+    height: 5.16667rem;
+    background: url(img/indie-bg-01.jpg) no-repeat;
+    background-size: 9rem 5.16667rem; }
+  .s2 {
+    height: 3.4rem;
+    background: url(img/indie-bg-02.jpg) no-repeat;
+    background-size: 7.5rem 3.4rem; }
+  .s3 {
+    margin-top: 0.29167rem;
+    height: 5.1rem;
+    background: url(img/indie-bg-03.jpg) no-repeat;
+    background-size: 7.5rem 5.1rem; }
+  .s4 {
+    margin-top: 0.41667rem;
+    height: 1.5rem;
+    background: url(img/indie-bg-04.jpg) no-repeat;
+    background-size: 7.5rem 1.5rem; }
+  .s5 {
+    margin-top: 0.41667rem;
+    height: 6.75833rem;
+    background: url(img/indie-bg-05.jpg) no-repeat;
+    background-size: 7.5rem 6.75833rem; }
+  .s6 {
+    margin-top: 0.625rem;
+    margin-bottom: 0.625rem;
+    height: 6.20833rem;
+    background: url(img/indie-bg-06.jpg) no-repeat;
+    background-size: 7.5rem 6.20833rem; }
+  .s .t {
+    width: 7.5rem; }
+    .s .t1 {
+      margin-top: 0.625rem;
+      height: 1.25rem;
+      background: url(img/indie-t-01.jpg) no-repeat;
+      background-size: 7.5rem 1.25rem; }
+    .s .t2 {
+      margin-top: 0.625rem;
+      height: 1.29167rem;
+      background: url(img/indie-t-02.jpg) no-repeat;
+      background-size: 7.5rem 1.29167rem; }
+    .s .t3 {
+      margin-top: 0.625rem;
+      height: 1.28333rem;
+      background: url(img/indie-t-03.jpg) no-repeat;
+      background-size: 7.5rem 1.28333rem; }
+    .s .t4 {
+      margin-top: 0.625rem;
+      height: 1.26667rem;
+      background: url(img/indie-t-04.jpg) no-repeat;
+      background-size: 7.5rem 1.26667rem; }
+  .s .h {
+    font-size: 0.35rem;
+    font-weight: bold;
+    margin-top: 0.58333rem; }
+  .s .intro {
+    margin-top: 0.25rem; }
+  .s .pic {
+    text-align: center; }
+    .s .pic img {
+      display: block;
+      width: 7.5rem;
+      height: 4.21875rem;
+      margin: 0.33333rem auto 0; }
+      .s .pic img.narrow {
+        width: 4.125rem;
+        height: 7.3125rem; }
+  .s .winner {
+    list-style: none;
+    padding: 0.33333rem 0.5rem;
+    background: #88dbb8;
+    border-radius: 0.125rem; }
+
+/*# sourceMappingURL=indieGame.css.map */

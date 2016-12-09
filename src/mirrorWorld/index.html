@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<meta content="yes" name="apple-mobile-web-app-capable">     
+		<meta content="black" name="apple-mobile-web-app-status-bar-style">     
+		<meta content="telephone=no" name="format-detection">
+		<title>镜世界</title>
+		<link rel="stylesheet" type="text/css" href="../MyVideo/css/ypw-video.css"/>
+		<link rel="stylesheet" type="text/css" href="css/mirror-world.css"/>
+		<script type="text/javascript">
+			(function (doc, win) {
+		        var docEl = doc.documentElement,
+		            resizeEvt = 'orientationchange' in window ? 'orientationchange' : 'resize',
+		            recalc = function () {
+		                var clientWidth = docEl.clientWidth;
+		                if (!clientWidth) return;
+		                if(clientWidth>=900){
+		                    docEl.style.fontSize = '100px';
+		                }else{
+		                    docEl.style.fontSize = 100 * (clientWidth / 900) + 'px';
+		                }
+		                document.body.style.visibility = "visible";
+		            };
+		
+		        if (!doc.addEventListener) return;
+		        win.addEventListener(resizeEvt, recalc, false);
+		        doc.addEventListener('DOMContentLoaded', recalc, false);
+		    })(document, window);
+	</script>
+	</head>
+	<body promotionId="{{promotion.id}}" style="visibility: hidden;">
+		<section class="s s1"></section>
+		<section class="s s2"></section>
+		<section class="s s3"></section>
+		<section class="s s4">
+			<div class="s s4-0">
+				<div class="c">
+					<div class="c-info" data-protocol-check="schemeHost" data-ypw-url="ypw://event_game/4" data-custom-url="http://m.ypw.163.com/share/games/MDAwMDAwMzM3Mw==">
+						<div class="logo"></div>
+						<div class="intro" >
+							<p class="h">《镜》</p>
+							<p>是一款国人制作的解谜游戏</p>
+							<p>在这美丽的镜中世界</p>
+							<p>从诗句中寻找线索，解开谜题...</p>
+						</div>
+						<div class="detail">游戏详情</div>
+					</div>
+				</div>
+			</div>
+			<div class="c">
+				<div class="c-v">
+					<div class="ypw-video">
+						<video id="ypwVideo" preload="none" controls="false" poster="img/v-poster.jpg" src="http://gameapp.fp.ps.netease.com/file/581adc15143cfac1dbb732a4cfdkEubS" type="video/mp4">
+						</video>
+					</div>
+				</div>
+				<div class="c-bs">
+					<span class="btn buy" data-protocol-check="schemeHost" data-ypw-url="ypw://event_game_paid/3572"><i class="reflect"></i>1元购买</span>
+					<span class="btn share" 
+						data-protocol-check="share" 
+						data-ypw-fun="showShareTips" 
+						data-isshare="{{promotion.is_share}}" 
+						data-shareurl="{{promotion.share_url}}" 
+						data-thumburl="{{promotion.thumb['url']}}" 
+						data-sharetitle="{{promotion.share_title}}" 
+						data-description="{{promotion.share_description}}" >
+							<i class="reflect"></i>分享快乐
+					</span>
+				</div>
+			</div>
+		</section>
+		<section class="s s5">
+			<div class="c">
+				<div class="c-text">这款由Crazyant团队制作的游戏，画面简洁优美，游戏的元素都具有浓厚的国风特色，有情有景。解谜由易到难，适合各个年龄层的玩家。</div>
+				<div class="c-text">10月19日-11月23日 在游品位购买《镜》的小伙伴自动参与抽奖，奖品有吉祥物Yo仔吃瓜抱枕X3，雷蛇键盘。奖品将于活动结束后的7日内发出</div>
+			</div>
+		</section>
+		<section class="s s6">
+			<div class="c">
+				<div class="c-ps">有疑问请加游品位QQ群找客服喔~</div>
+				<div class="c-ps">游品位官方群 2群 516065009；3群 436422523。</div>
+			</div>
+		</section>
+		<div class="ww-share-tips" id="shareTips">
+			<div class="tips-dialog">
+				<span>点击右上角<i class="ico-share"></i>分享</span>
+				<span class="pointer"></span>
+			</div>
+		</div>
+		<script src="../grow/js/jquery-1.11.1.min.js" type="text/javascript" charset="utf-8"></script>
+		<script src="../common/js/tool-frontend.js" type="text/javascript" charset="utf-8"></script>
+		<script src="../grow/js/ypw-video.js" type="text/javascript" charset="utf-8"></script>
+		<script type="text/javascript">
+			function showShareTips(){
+				var shareTips = document.querySelector("#shareTips");
+				shareTips.style.display = "block";
+				shareTips.onclick = function(){
+					shareTips.style.display = "none";
+				}
+			}
+			$(function(){
+				FETool.statsReport({type:"view_new",icode:$("body").attr("promotionId")});
+			});
+		</script>
+	</body>
+</html>

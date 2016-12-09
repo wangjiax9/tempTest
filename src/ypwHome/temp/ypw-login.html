@@ -1,0 +1,92 @@
+<div class="ypw-login-dialog" style="display: none;">
+	<div class="drawer">
+		<span class="ico ico-close" id="loginDialogClose"></span>
+		<ul class="ypw-tab"> 
+		   	<li class="active"><a href="javascript:void(0)">手机登录</a></li> 
+		   	<li><a href="javascript:void(0)">网易邮箱登录</a></li> 
+		   	<li style="display: none;"><a href="javascript:void(0)">注册账号</a></li> 
+	  	</ul> 
+		<div class="ypw-panels"> 
+		   	<div class="ypw-panel">
+		   		<div class="form-area" id="loginArea">
+		   			<div class="form-control prefix">
+		   				<span class="addon">+86</span>
+		   				<input type="text" class="input-phone" id="phone" placeholder="请输入手机号"/>
+		   			</div>
+		   			<div class="form-control verify-code">
+		   				<input type="text" class="input-code" placeholder="请输入验证码"/>
+		   				<span class="btn btn-disabled btn-getcode">获取</span>
+		   			</div>
+		   			<div class="form-control mbmore">
+		   				<span class="ypw-checkbox autoLogin">
+		   					<input type="checkbox"  />
+		   					<i class="ico ico-choose"></i>
+		   				</span>
+		   				<span class="ypw-checkbox-text">下次自动登录</span>
+		   			</div>
+		   			<div class="form-control verify-error" style="display: none;"></div>
+		   			<div class="form-control form-full">
+		   				<span class="btn btn-disabled verify-login">验证并登录</span>
+		   			</div>
+		   			<div class="form-control">
+		   				<span class="weto" id="toRegister">新用户注册</span>
+		   			</div>
+		   		</div>
+		   	</div> 
+		   	<div class="ypw-panel" style="display: none;">
+		   		<div class="form-area">
+		   			<div class="form-control form-full">
+		   				<input type="text" id="email" placeholder="请输入网易邮箱账号"/>
+		   			</div>
+		   			<div class="form-control form-pwd">
+		   				<input type="password" id="emailPwd" placeholder="请输入密码"/>
+		   				<span class="ico ico-16 ico-openeye" id="pwdEye"></span>
+		   			</div>
+		   			<div class="form-control mbmore">
+		   				<span class="ypw-checkbox autoLogin" >
+		   					<input type="checkbox"  />
+		   					<i class="ico ico-choose"></i>
+		   				</span>
+		   				<span class="ypw-checkbox-text">下次自动登录</span>
+		   				<a class="forget-pwd" href="http://reg.163.com/resetpwd/index.do" target="_blank">忘记密码？</a>
+		   			</div>
+		   			<div class="form-control verify-error" style="display: none;"></div>
+		   			<div class="form-control form-full">
+		   				<span class="btn btn-disabled" id="emailLogin">登录</span>
+		   			</div>
+		   			<div class="form-control to-reg-email">
+		   				<a href="https://zc.reg.163.com/regInitialized" target="_blank">没有网易邮箱？立即免费注册</a>
+		   			</div>
+		   		</div>
+		   	</div> 
+		  	<div class="ypw-panel" style="display: none;">
+		  		<div class="form-area" id="registerArea">
+		   			<div class="form-control prefix">
+		   				<span class="addon">+86</span>
+		   				<input type="text" class="input-phone" id="phone" placeholder="请输入手机号"/>
+		   			</div>
+		   			<div class="form-control verify-code">
+		   				<input type="text" class="input-code" placeholder="请输入验证码"/>
+		   				<span class="btn btn-disabled btn-getcode">获取</span>
+		   			</div>
+		   			<div class="form-control mbmore">
+		   				<span class="ypw-checkbox autoLogin">
+		   					<input type="checkbox"  />
+		   					<i class="ico ico-choose"></i>
+		   				</span>
+		   				<span class="ypw-checkbox-text">下次自动登录</span>
+		   			</div>
+		   			<div class="form-control verify-error" style="display: none;"></div>
+		   			<div class="form-control form-full">
+		   				<span class="btn btn-disabled verify-login">注册</span>
+		   			</div>
+		   			<div class="form-control">
+		   				<span class="weto" id="toLogin">去登录</span>
+		   			</div>
+		   		</div>
+		  	</div> 
+	 	</div>
+	</div>
+	<div class="ypw-mask"></div>
+</div>
+	

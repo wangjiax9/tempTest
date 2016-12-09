@@ -1,0 +1,153 @@
+$baseFontSize:100 !default;
+$rate:1.2;
+@function toRem($px){
+    @return ($px / $baseFontSize / $rate) * 1rem;
+}
+html,body,dl,dt,dd,p,img,a{ 
+    padding: 0;
+    margin: 0; 
+}
+html{-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;}
+a{
+    text-decoration: none;
+}
+*{
+  outline: none; 
+  -webkit-tap-highlight-color: transparent;  
+  -webkit-focus-ring-color: rgba(0, 0, 0, 0);
+}
+.s{
+    width:toRem(1080);
+    display: block;
+    position: relative;
+    &1{
+        height: toRem(800);
+        background: url(../img/lanota_01.jpg) no-repeat;
+        background-size: toRem(1080) toRem(800); 
+    }
+    &2{
+        height: toRem(1025);
+        background: url(../img/lanota_02.jpg) no-repeat;
+        background-size: toRem(1080) toRem(1025);
+        .c-info{
+            width:100%;
+            height:toRem(270);
+            position: absolute;
+            left:0;
+            bottom:toRem(90);
+        }
+    }
+    &3{
+        height: toRem(615);
+        background: url(../img/lanota_03.jpg) no-repeat;
+        background-size: toRem(1080) toRem(615);
+    }
+    &4{
+        height: toRem(1000);
+        background: url(../img/lanota_04.jpg) no-repeat;  
+        background-size: toRem(1080) toRem(1000);
+    }
+     .c{
+        width:toRem(1000);
+        margin:auto;
+        font-family: "microsoft yahei";
+        position: relative;
+        &-v{
+            height: toRem(540);
+            padding-top:toRem(10);
+            .ypw-video{
+                 video{
+                    width:toRem(984);
+                    height: toRem(536);
+                    position: relative;
+                }
+            }
+        }
+        &-bs{
+            position: relative;
+            height:toRem(132);
+            margin-top: toRem(76);
+            .btn{
+                display: block;
+                text-align: center;
+                width: toRem(432);
+                height: toRem(132);
+                line-height: toRem(132);
+                font-size: toRem(68);
+                letter-spacing: toRem(10);
+                color:#fff;
+                position: absolute;
+                top:0;
+                background: url(../../../dist/Lanota/img/btn-lanota.png) no-repeat;
+                &.buy{
+                    left:0; 
+                }
+                &.share{
+                    right:0;
+                }
+                .reflect{
+                    width: toRem(440);
+                    height: toRem(90);
+                    background: url(../img/btn-re.png) no-repeat;
+                    background-size: contain;
+                    position: absolute;
+                    left:0;
+                    top:toRem(128);
+                }
+            }
+        }
+    }
+}
+.ww-share-tips{
+    display: none;
+    width:100%;
+    height: 100%;
+    position: fixed;
+    left:0;
+    top:0;
+    z-index: 99999;
+    background: rgba(0,0,0,.5);
+    .tips-dialog{
+        width:5rem;
+        height:1.2rem;
+        line-height: 1.2rem;
+        text-align: center;
+        font-family: "microsoft yahei";
+        background: #acfbf8;
+        font-size:0.48rem;
+        border-radius: 0.05rem;
+        position: absolute;
+        right:0.28rem;
+        top:2rem;
+        .ico-share{
+            display: inline-block;
+            width:0.6rem;
+            height:0.6rem;
+            margin:0 0.1rem;
+            vertical-align: middle;
+            position: relative;
+            top:-0.03rem;
+            background: url(../img/ico-share.png) no-repeat;
+            background-size: contain;
+        }
+        .pointer{
+            width:0.06rem;
+            height:1.5rem;
+            position: absolute;
+            bottom: 1.2rem;
+            right: 0.3rem;
+            background: #acfbf8;
+            &:after{
+                content: "";
+                display: block;
+                width:0.2rem;
+                height: 0.2rem;
+                border-radius: 50%;
+                background: #acfbf8;
+                position: absolute;
+                top:-0.08rem;
+                left:-0.075rem;
+            }
+        }
+    }
+}

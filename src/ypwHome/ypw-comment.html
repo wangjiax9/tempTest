@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<meta content="yes" name="apple-mobile-web-app-capable">     
+		<meta content="black" name="apple-mobile-web-app-status-bar-style">     
+		<meta content="telephone=no" name="format-detection">
+		<title>评论模块</title>
+		<link rel="stylesheet" type="text/css" href="../../dist/ypwHome/css/ypw/ypw-comment.css"/>
+	</head>
+	<body>
+		<div class="ypw-main">
+			<div class="ypw-content">
+				<div class="ypw-l">
+					<!--include "./temp/ypw-comment.html"-->
+				</div>
+			</div>
+		</div>
+		<script src="../common/js/jquery-1.11.1.min.js" type="text/javascript" charset="utf-8"></script>
+		<script type="text/javascript">
+			(function(){
+				
+				function eventHandle(){
+					//要回复
+					$(".to-reply").click(function(){
+						var replyBox = $(this).closest(".cmt-dinner").find(".cmt-reply-box");
+						if(replyBox.is(":visible")) return;
+						$(".cmt-reply-box").slideUp();
+						replyBox.find(".input").html("");
+						replyBox.slideDown();
+					});
+					
+					//监听回复输入
+					$(".cmt-input > .input").on("input propertychange",function(){
+						if($(this).html().length > 0){
+							$(this).closest(".cmt-reply-box").find(".error-msg").fadeOut(100).text("");
+						}
+					});
+					
+					//回复按钮
+					$(".btn-reply").click(function(){
+						//检查是否为空
+						if(!checkEmpty($(this))) return;
+						
+						//判断是否登录
+						
+					});
+				}
+				function checkEmpty(obj){
+					var $el = obj.closest(".cmt-reply-box").find(".input");
+					if($el.html() == ""){
+						obj.closest(".cmt-reply-box").find(".error-msg").fadeIn(100).text("评论内容不能为空，请说点什么");
+						return false;
+					}else{
+						return true;
+					}
+				}
+				$(function(){
+					for (var i = 0; i < 5; i++) {
+						var $cmt = $(".ypw-cmt-box-sub .ypw-cmt-sub:first").clone();
+						$cmt.find(".cmt-reply-box").hide();
+						if(i == 4){
+							$cmt.addClass("no-mb");
+						}
+						$cmt.appendTo($(".ypw-cmt-box-sub"));
+					}
+					
+					
+					//事件处理
+					eventHandle();
+				});
+			})();
+		</script>
+	</body>
+</html>

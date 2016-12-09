@@ -1,0 +1,130 @@
+html,body,ul,img,dl,dt,dd,h1{
+    margin: 0;
+    padding: 0;
+    border: 0; 
+    outline: 0;
+    vertical-align: baseline;
+}
+html,body{
+    width:100%;
+    height:100%;
+    overflow-x: hidden;
+}
+body{ 
+    background: $body-bg;
+    font-size: $font-default;
+    line-height: 1.2;
+    color:$default-text;
+    font-family: "microsoft yahei";
+}
+html{
+    -ms-text-size-adjust:100%;
+    -webkit-text-size-adjust:100%;
+}
+*{
+  outline: none; 
+  -webkit-tap-highlight-color: transparent;  
+  -webkit-focus-ring-color: rgba(0, 0, 0, 0);
+}
+ul{list-style: none;} 
+a{
+    color:#959595;
+    text-decoration:none; 
+    &:hover{
+        color:#6e6bd6;
+    }
+}
+em{
+    font-style: normal;
+}
+.ico{
+    display: inline-block;
+    vertical-align: middle;
+    position: relative;
+    background: url(../../images/ypw/ypw-ico-m.png) no-repeat;
+    background-size: toRem(500) toRem(550);
+    
+    &-36{width:toRem(36);height:toRem(36);}
+    &-48{width:toRem(48);height:toRem(48);}
+    &-64{width:toRem(64);height:toRem(64);}
+    &-72{width:toRem(72);height:toRem(72);}
+    &-90{width:toRem(90);height:toRem(90);}
+    
+    &-menu{background-position: toRem(-92) 0;} 
+    &-logo{background-position: 0 toRem(-360);}
+    &-download{background-position: toRem(-186) toRem(-136);}
+    &-yozuan{background-position: toRem(-126) toRem(-184);}
+    &-clock{background-position: toRem(-90) toRem(-184);}
+    &-close{background-position: toRem(-162) 0;}
+    &-close-white{background-position: toRem(-162) toRem(-72);}
+    &-choose{background-position: toRem(-162) toRem(-180);}
+    &-openeye{background-position: toRem(-90) toRem(-136);}
+    &-closeeye{background-position: toRem(-138) toRem(-136);}
+    &-back{background-position: toRem(-90) toRem(-216);}
+    &-qq{background-position: 0 0;}
+    &-wexin{background-position: 0 toRem(-90);}
+    &-yixin{background-position: 0 toRem(-180);}
+    &-weibo{background-position: 0 toRem(-270);}
+    &-pointer{background-position: toRem(-198) toRem(-180);width:toRem(24);height:toRem(36);}
+    &-emot{background-position: toRem(-160) toRem(-390);}
+    &-emot-open{background-position: toRem(-240) toRem(-390);}
+    &-zan{background-position: toRem(-282) toRem(-134);}
+    &-lv{
+        width:toRem(24);
+        height:toRem(24);
+        background-position: toRem(-236) toRem(-182);
+    }
+}
+.label{
+    display: inline-block;
+    height:toRem(36);
+    line-height: toRem(36);
+    font-size:$font-mini;
+    color: $label-text;
+    position: relative;
+    padding:toRem(3) toRem(16) 0 toRem(48);
+    border-radius: toRem(16);
+    &-beta-soon{background-color: #81d8eb;   }
+    &-beta-ing{background-color: #64cfa9; }
+    &-beta-end{background-color: #d7e7ee;  }
+    &-pay{ background-color: #ffbc5c;}
+    &-lv{
+        height:toRem(32);
+        line-height: toRem(32);
+        background-color: #58e4e4;
+        @include borderRadius(toRem(20));
+    }
+    .ico{
+        position: absolute;
+        left:toRem(10);
+        top:toRem(3);
+    }
+    em{
+        line-height: $font-mini;
+    }
+}
+.btn{
+    display: inline-block;
+    height:toRem(120);
+    line-height: toRem(120);
+    min-width:toRem(240);
+    padding:0 toRem(36);
+    font-size:$font-big;
+    color:$label-text;
+    text-align: center;
+    vertical-align: middle;
+    white-space: nowrap;
+    cursor: pointer;
+    border-radius: toRem(8);
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    &-small{
+        height:toRem(100);
+        line-height: toRem(100);
+    }
+    &-info{background: #95e3d7; }
+    &-primary{background: #00b4b4; }
+    &-disabled{background: #ebebeb; color: #ccc;cursor: default;}
+}
